@@ -1,0 +1,18 @@
+function coord=face_detect(im,database,scaling_factor,minN,flags,minSize,maxSize)
+Input:
+im: grayscale double image 
+database: string containing xml database filename
+scaling_factor: Parameter specifying how much the image size is reduced at each image scale
+minN: Parameter specifying how many neighbors each candidate rectangle should have to retain it
+flags:
+    CV_HAAR_DO_CANNY_PRUNING    1  Causes flat regions(no lines) to be skipped by classifier
+    CV_HAAR_SCALE_IMAGE         2  Scales the image rather than detector 
+    CV_HAAR_FIND_BIGGEST_OBJECT 4  Finds biggest object
+    CV_HAAR_DO_ROUGH_SEARCH     8  Terminates search after first hit for
+                                   a candidate usually used with CV_HAAR_FIND_BIGGEST_OBJECT
+flags maybe or'ed together with bitor in MATLAB to combine multiple flags
+minSize: Minimum possible object size. Objects smaller than that are ignored.
+maxSize: Maximum possible object size. Objects larger than that are ignored.
+
+Output:
+coord contains the face coordinates in [x,y,w,h] format
