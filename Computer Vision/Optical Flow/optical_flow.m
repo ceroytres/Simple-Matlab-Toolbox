@@ -22,14 +22,14 @@ d=[1/12	-2/3	0	2/3	-1/12];
 Ix=imfilter(I2,d,'replicate');
 Iy=imfilter(I2,d','replicate');
 
-% Ix=gaussianBlur(Ix,1.5);
-% Iy=gaussianBlur(Iy,1.5);
+Ix=gaussianBlur(Ix,1.5);
+Iy=gaussianBlur(Iy,1.5);
 
 imDim=size(I1);
 
 
 It=I2-I1;
-% It=gaussianBlur(It,1.5);
+It=gaussianBlur(It,1.5);
 
 Ix2=imfilter(Ix.^2,h,'symmetric');
 Ixy=imfilter(Ix.*Iy,h,'symmetric');
