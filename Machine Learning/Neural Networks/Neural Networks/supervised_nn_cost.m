@@ -28,6 +28,7 @@ switch ei.activation_fun
         df=@(z) (1-z.^2);
     case 'funny_tanh'
         f=@(a) 1.7159*tanh((2/3)*a);
+        
         df=@(z) 1.7159*(2/3)*(1-(z/1.7159).^2);
     otherwise
         fprintf('Using default non-linearity\n');
