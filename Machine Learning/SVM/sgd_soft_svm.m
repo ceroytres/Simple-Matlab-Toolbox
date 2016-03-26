@@ -5,7 +5,7 @@ function [w]=sgd_soft_svm(x,y,lambda,T)
 %    input:
 %         x: input features
 %         y: labels 
-%         lambda: learning rate
+%         lambda: penalty 
 %    Output:
 %         w: SVM wieghts
 
