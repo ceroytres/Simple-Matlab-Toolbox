@@ -24,7 +24,7 @@ function R=reachable(G,X,Z)
 %Based on:
 %Probabilistic Graphical Models – Principles and Techniques
 %Algorithm 3.1 – Algorithm for finding nodes reachable from X given Z via active trails
-%Koller, Fir
+%Koller, Nir
 %
 L=Z.copy();
 A=py.set();
