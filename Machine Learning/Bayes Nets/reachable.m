@@ -8,9 +8,23 @@ function R=reachable(G,X,Z)
 %
 %  R:Set of reachable nodes
 %
-%Algorithms in Probabilistic Graphical Models – Principles and Techniques
-%Algorithm 3.1 – Algorithm for finding nodes reachable from X given Z via active trails
+% Example:
+% A=[0 0 0 0 1;
+%    0 0 0 1 0;
+%    0 0 0 1 0;
+%    0 0 0 0 1;
+%    0 0 0 0 0];
+% G=digraph(A,{'M','S','R','P','A'});
+% plot(G)
+% R=reachable(G,'M',py.set(['A','P']));
+% disp(R)
+% 
+% 
 %
+%Based on:
+%Probabilistic Graphical Models – Principles and Techniques
+%Algorithm 3.1 – Algorithm for finding nodes reachable from X given Z via active trails
+%Koller, Fir
 %
 L=Z.copy();
 A=py.set();
