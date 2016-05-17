@@ -18,5 +18,5 @@ for l = 1 : numel(ei.layer_sizes)
     % Xaxier's scaling factor
     s = sqrt(6) / sqrt(prev_size + cur_size);
     stack{l}.W = rand(cur_size, prev_size)*2*s - s;
-    stack{l}.b = zeros(cur_size, 1);
+    stack{l}.b = rand()/10*ones(cur_size, 1);
 end
